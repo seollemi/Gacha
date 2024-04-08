@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Image and Video Display</title>
+</head>
+<body>
+    <img id="imageDisplay" src="" alt="Image Display" width="50%">
+    <video id="videoPlayer" loop autoplay muted width="50%"> 
+        <source src="" type="video/mp4">
+        Your browser does not support the video tag.
+    </video>
+
+    <script>
+        var imageNames = [
+            "bailu.webp", "kafka.webp", "luka.webp", "sampo.webp", "serval.webp"
+        
+        ];
+        var basePath = "/Gacha/Chars/"; // Corrected basePath assignment
+
+        function displayMedia(index) {
+            var imageName = imageNames[index];
+            var imagePath = basePath + imageName;
+
+            // Display image
+            document.getElementById("imageDisplay").src = imagePath;
+
+            // Display video based on index
+            if (index == 0 || index == 1) {
+                document.getElementById("videoPlayer").src = "special.webm";
+            } else {
+                document.getElementById("videoPlayer").src = "normal.webm";
+            }
+        }
+
+        // Example usage
+        function getRandomIndex() {
+            return Math.floor(Math.random() * imageNames.length);
+        }
+
+        // Example usage: Display media for a random index
+        var randomIndex = getRandomIndex();
+        displayMedia(randomIndex);
+    </script>
+</body>
+</html>

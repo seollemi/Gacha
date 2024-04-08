@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="styleee.css">
+    <script src="index.js"></script> 
+</head>
+<body>
+    <div class = "headerr">
+        <br><br><br><br>
+    </div>
+    <div class="container">
+        <div class="content">
+            <img src="kafka-honkai-star-rail.jpg" alt="">
+        </div>
+        <div class="pull">
+            <button onclick="displayMedia(getRandomIndex())"> <img src="x.png" alt=""> </button>
+        </div>
+        <div class="content-overlay">
+                <img id="imageDisplay" src="" alt="Image Display">
+                <div id="charDetails">
+                    <p id="charName"></p>
+                    <p id="charRarity"></p>
+                </div>
+                <button id ="butt" onClick="window.location.href=window.location.href"><h1>×</h1></button>
+                <video id="videoPlayer" autoplay onended="videoEnded()"> 
+                    <source src="" type="video/mp4">
+                </video>
+        </div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,88 @@
+body {
+    background-image: url(/Gacha/allbanner-bg.webp);
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+.headerr{
+    grid-row:1;
+    grid-column: 1/13;
+}
+.container {
+    position: relative;
+    display: grid;
+    grid-template-columns: repeat(12,1fr);
+}
+.content {
+    grid-row: 2;
+    grid-column: 3/11;
+}
+.content img {
+    width: 100%;
+    height: auto;
+    align-self: center;
+}
+.pull {
+    grid-row: 3;
+    grid-column: 10/11;
+    align-self: right;
+}
+.pull img {
+    border-radius: 36px;
+}
+.pull button {
+    background-color: transparent;
+    border: none;
+}
+.content-overlay {
+    position: fixed;
+    top: 0;
+    right: 0; /* Placing the overlay on the top right corner */
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    background-image: url(/Gacha/warp-bg.webp);
+    background-size: cover;
+    background-repeat: no-repeat;
+    text-align: center;
+    transition: all 0.6s ease;
+    opacity: 0;
+    pointer-events: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.content-overlay img {
+    width: 30%; /* Adjust as needed */
+    max-width: 100%;
+    opacity: 0;
+}
+
+.content-overlay button {
+    background-color: transparent;
+    border: none;
+    position: absolute;
+    top: -70px; 
+    right: 30px;
+    opacity: 0;
+    font-size: 50px;
+    color: white;
+}
+
+.content-overlay video {
+    width: max-content;
+    height: max-content;
+    position: absolute; /* Change positioning to absolute */
+    left: 0; /* Move the video to the left */
+    margin-left: 0; /* Remove any left margin */
+}
+#charDetails {
+    color: #ffffff; /* Change text color to white */
+    font-size: 30px; /* Change font size to 16 pixels */
+}
+
+#charDetails p {
+    margin: 20px; 
+}
+
+
